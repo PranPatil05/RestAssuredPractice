@@ -24,7 +24,7 @@ public class Basic {
 
 
         String response=given().log().all().queryParam("key","qaclick123").header("Content-Type","application/json")
-                .body(new String(Files.readAllBytes(Paths.get("C:\\Learning\\RestAssuredPractice\\src\\test\\resources\\Files\\Addbookdetails.json")))).when().post("maps/api/place/add/json")
+                .body(new String(Files.readAllBytes(Paths.get("F:\\Software testing\\RestAssured\\RestAssured_Home\\src\\test\\resources\\Files\\Addbookdetails.json")))).when().post("maps/api/place/add/json")
                 .then().assertThat().statusCode(200).body("scope",equalTo("APP")).extract().response().asString();
 
         System.out.println(response);
