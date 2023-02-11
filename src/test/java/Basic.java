@@ -45,6 +45,8 @@ public class Basic {
                 .when().get("maps/api/place/get/json")
                 .then().log().all().assertThat().statusCode(200).extract().response().asString();
 
+
+
         System.out.println(getPlaceResponse);
 
         JsonPath js1=reUsableMethod.rawToJson(getPlaceResponse);
